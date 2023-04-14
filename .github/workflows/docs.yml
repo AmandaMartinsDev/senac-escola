@@ -4,11 +4,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - "documentation/**"
-  pull_request:
-    paths:
-      - "documentation/**"
 
 permissions:
   contents: write
