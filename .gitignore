@@ -1,0 +1,39 @@
+# Editor
+/.vscode/
+.editorconfig
+.idea
+.idea_modules/
+out/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Python
+__pycache__/
+
+## Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+## PEP 582
+__pypackages__/
+
+# Frontend
+node_modules/

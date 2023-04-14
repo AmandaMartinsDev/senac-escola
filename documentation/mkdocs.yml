@@ -1,0 +1,34 @@
+site_name: Escola.
+site_description: Documentação oficial da aplicação de gestão escolar desenvolvida para o 2ª Etapa do Projeto Integrador IV
+site_url: https://amandamartinsdev.dev/senac-escola/
+
+repo_url: https://github.com/amandamartinsdev/senac-escola
+repo_name: amandamartinsdev/senac-escola
+edit_uri: tree/main/documentation/docs
+
+theme:
+  name: material
+  language: pt-BR
+  palette:
+    - scheme: default
+      primary: green
+      accent: green
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - scheme: slate
+      primary: green
+      accent: green
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  logo: assets/logo.png
+  favicon: assets/logo.png
+
+plugins:
+  - search
+  - termynal
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [../backend/app]

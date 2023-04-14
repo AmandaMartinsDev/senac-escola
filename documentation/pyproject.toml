@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "escola_doc"
+version = "0.1.0"
+description = "Documentação oficial da aplicação de gestão escolar desenvolvida para o 2ª Etapa do Projeto Integrador IV"
+homepage = "https://escola.amandamartins.dev"
+repository = "https://github.com/amandamartinsxavier/senac-escola"
+documentation = "https://amandamartins.dev/senac-escola/"
+authors = ["Amanda Martins Xavier <hi@amandamartins.dev>"]
+license = "GPL-3.0"
+readme = "../README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+mkdocs-material = "^9.1.5"
+mkdocstrings = "^0.20.0"
+mkdocstrings-python = "^0.9.0"
+termynal = "^0.2.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
