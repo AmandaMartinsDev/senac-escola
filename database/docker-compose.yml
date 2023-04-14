@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+
+  postgres:
+    container_name: postgres:latest
+    image: postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: escola
+    volumes:
+          - ./escola.sql:/docker-entrypoint-initdb.d/escola.sql
+    networks:
+      - postgres
+
+  pgadmin:
+    container_name: pgadmin:latest
+    image: dpage/pgadmin4
+    restart: unless-stopped
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: 123
+    networks:
+      - postgres
+
+networks:
+  postgres:
+    driver: bridge
