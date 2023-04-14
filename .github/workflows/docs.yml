@@ -27,3 +27,4 @@ jobs:
           path: .cache
       - run: pip install mkdocs-material mkdocstrings mkdocstrings-python termynal
       - run: mkdocs gh-deploy --force
+      
