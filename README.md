@@ -18,17 +18,17 @@ Para utilizar o projeto, é necessário ter instalado inicialmente em sua máqui
 - [Python](https://www.python.org/)
 - [Poetry](https://python-poetry.org/)
 
-Para verificar todos os requisitos do projeto, acesse a página de [requisitos](https://amandamartins.dev/senac-escola/requisitos).
+Para verificar todos os requisitos do projeto, acesse a página de [requisitos](https://amandamartinsdev.github.io/senac-escola/requisitos).
 
 ---
 
 ## 🔎 Como utilizar
 
-Para utilizar o projeto, é necessário seguir os passos descritos na página de [configurações](https://amandamartins.dev/senac-escola/configurações).
+Para utilizar o projeto, é necessário seguir os passos descritos na página de [configurações](https://amandamartinsdev.github.io/senac-escola/configurações).
 
-Com relação aos testes, é necessário seguir os passos descritos na página de [testes](https://amandamartins.dev/senac-escola/testes), e para requisições no backend, a página de [requisições](https://amandamartins.dev/senac-escola/requisições).
+Com relação aos testes, é necessário seguir os passos descritos na página de [testes](https://amandamartinsdev.github.io/senac-escola/testes), e para requisições no backend, a página de [requisições](https://amandamartinsdev.github.io/senac-escola/requisições).
 
-E ao finalizar os trabalhos, é necessário seguir os passos descritos na página de [encerramento](https://amandamartins.dev/senac-escola/pull-request).
+E ao finalizar os trabalhos, é necessário seguir os passos descritos na página de [encerramento](https://amandamartinsdev.github.io/senac-escola/pull-request).
 
 ---
 
@@ -47,7 +47,7 @@ Por se tratar de um projeto acadêmico, não estamos aceitando contribuições e
 ## 📎 Links
 
 - [Site oficial da aplicação](https://escola.amandamartins.dev/)
-- [Documentação da aplicação](https://amandamartins.dev/senac-escola/)
+- [Documentação da aplicação](https://amandamartinsdev.github.io/senac-escola/)
 
 ---
 
