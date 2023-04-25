@@ -17,6 +17,7 @@
     "lint": "eslint && prettier .  --write"
   },
   "dependencies": {
+    "sass": "^1.62.0",
     "vue": "^3.2.47"
   },
   "devDependencies": {
