@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Backend da aplicação de gestão escolar desenvolvida para o 2ª Etapa do Projeto Integrador IV"
 homepage = "https://escola.amandamartins.dev"
 repository = "https://github.com/amandamartinsxavier/senac-escola"
-documentation = "https://amandamartins.dev/senac-escola/"
+documentation = "https://amandamartinsdev.github.io/senac-escola/"
 authors = ["Amanda Martins Xavier <hi@amandamartins.dev>"]
 license = "GPL-3.0"
 readme = "../README.md"
@@ -20,7 +20,7 @@ psycopg2-binary = "^2.9.6"
 python-dotenv = "^1.0.0"
 
 [tool.poetry.group.dev.dependencies]
-pytest = "^7.3.0"
+pytest = "^7.3.1"
 pytest-cov = "^4.0.0"
 blue = "^0.9.1"
 isort = "^5.12.0"
