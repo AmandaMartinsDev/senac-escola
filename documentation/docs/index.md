@@ -4,7 +4,7 @@
 > 
 > Aqui você terá acesso a todas as informações necessárias para entender e utilizar o projeto.
 >
-> Tanto o frontend e backend, quanto o banco de dados são hospedados na [Render](render.com/), e a documentação é hospedada no [GitHub Pages](https://pages.github.com/).
+> Tanto o frontend e backend, quanto o banco de dados são hospedados na [Render](https://render.com/), e a documentação é hospedada no [GitHub Pages](https://pages.github.com/).
 
 ---
 
@@ -47,7 +47,7 @@ Por se tratar de um projeto acadêmico, não estamos aceitando contribuições e
 ## 📎 Links
 
 - [Site oficial da aplicação](https://escola.amandamartins.dev/)
-- [Documentação da aplicação](https://amandamartins.dev/senac-escola/)
+- [Documentação da aplicação](https://amandamartinsdev.github.io/senac-escola/)
 
 ---
 
