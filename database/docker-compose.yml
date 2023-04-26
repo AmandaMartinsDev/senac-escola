@@ -3,7 +3,7 @@ version: '3.8'
 services:
 
   postgres:
-    container_name: postgres:latest
+    container_name: postgres
     image: postgres
     restart: unless-stopped
     environment:
@@ -16,7 +16,7 @@ services:
       - postgres
 
   pgadmin:
-    container_name: pgadmin:latest
+    container_name: pgadmin
     image: dpage/pgadmin4
     restart: unless-stopped
     environment:

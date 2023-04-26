@@ -1,12 +1,9 @@
 CREATE EXTENSION pgcrypto;
-CREATE TYPE account_type AS ENUM (
-  'manager', 'student', 'teacher', 'supplier'
-);
 CREATE TABLE users (
   user_email varchar(250) NOT NULL, 
   user_password varchar(250) NOT NULL, 
   user_name varchar(250) NOT NULL, 
-  user_type account_type NOT NULL, 
+  user_type varchar(8) NOT NULL, 
   document_id bigint NOT NULL, 
   user_address varchar(250) NOT NULL, 
   user_phone bigint NOT NULL, 
