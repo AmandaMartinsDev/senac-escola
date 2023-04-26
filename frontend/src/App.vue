@@ -7,7 +7,7 @@
     <i-layout-content
       class="_display:flex _align-items:center _justify-content:center"
       style="min-height: 100vh; background-color: var(--color--gray-10)"
-      ><i-form style="min-width: 360px" v-model="form">
+      ><i-form style="min-width: 360px">
         <i-form><h2>Acesse sua conta</h2></i-form>
         <i-form-group>
           <i-form-label>Email:</i-form-label>
@@ -22,9 +22,7 @@
           />
         </i-form-group>
         <i-form-group style="text-align: center">
-          <i-button color="primary" type="submit" :loading="carregando">
-            Acessar
-          </i-button>
+          <i-button color="primary" type="submit"> Acessar </i-button>
         </i-form-group>
         <i-form-group style="text-align: center">
           <i-button link color="dark">Esqueci minha senha</i-button>
