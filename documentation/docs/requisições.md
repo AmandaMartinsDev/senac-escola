@@ -17,4 +17,4 @@ $ curl --request GET \
 {"Hello":"World"}
 ```
 
-> ⚠️ Para requisições pelo Insomnia, irei disponilizar um arquivo de configuração para importar em breve, facilitando o processo.
+> ⚠️ Para requisições pelo Insomnia, você pode importar o arquivo disponibilizado na pasta `insomnia`.

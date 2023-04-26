@@ -8,10 +8,12 @@
 
 - [Node (^18.16.0)](https://nodejs.org/)
 - [Vue (^3.2.47)](https://vuejs.org/)
+- [@inkline/inkline (^3.2.2)](https://inkline.io/)
 
 ### 🧰 Desenvolvimento
 
 - [Vite (^4.2.0)](https://vitejs.dev/)
+- [Sass (^1.62.1)](https://sass-lang.com/)
 - [Prettier (^2.8.7)](https://prettier.io/)
 - [eslint (^8.38.0)](https://eslint.org/)
 - [@typescript-eslint/eslint-plugin (^5.58.0)](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin)
