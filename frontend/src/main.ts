@@ -1,11 +1,11 @@
 import { createApp } from "vue";
-import App from "./App.vue";
+import App from "./app/App.vue";
 
 import { Inkline, components } from "@inkline/inkline";
 import "@inkline/inkline/inkline.scss";
 
 import "./styles/global.scss";
-import router from './router/router';
+import router from './app/router/router';
 
 const app = createApp(App);
 
