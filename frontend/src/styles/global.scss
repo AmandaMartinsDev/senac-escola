@@ -6,3 +6,8 @@
   --color--primary--s: 77%;
   --color--primary--l: 39%;
 }
+
+@include i-input() {
+  ----border-radius: 50px;
+  ----padding: 10px 25px;
+}

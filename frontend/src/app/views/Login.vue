@@ -1,7 +1,7 @@
 <template>
   <i-layout vertical>
     <i-layout-content
-      class="_display:flex _align-items:center _justify-content:center"
+      class="_display:flex _align-items:center _justify-content:center logo"
       ><img src="/src/assets/logo-light-mode.webp" alt=""
     /></i-layout-content>
     <i-layout-content
@@ -22,7 +22,7 @@
           />
         </i-form-group>
         <i-form-group style="text-align: center">
-          <i-button color="primary" class="purple-button" type="submit">
+          <i-button color="primary" class="e-button access" type="submit">
             Acessar
           </i-button>
         </i-form-group>
@@ -38,16 +38,7 @@
 h2 {
   text-align: center;
 }
-
-.purple-button {
-  display: flex;
-  background-color: #3d50ff;
-  font-weight: bold;
-  font-size: 16px;
-  color: #ffffff !important;
-  padding: 0 30px;
-  height: 55px;
-  border-radius: 50px !important;
+.e-button.access {
   margin: 0 auto;
 }
 </style>

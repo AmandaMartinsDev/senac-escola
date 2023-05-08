@@ -17,28 +17,28 @@
             alt=""
           />
           <span class="cargo">Gerente Escolar</span>
-          <h1 class="greeting">Olá Elon,</h1>
+          <h1 class="greeting">Olá Adrian,</h1>
         </i-layout-header>
 
         <i-layout-content class="nav-content">
           <i-button to="/consulta-usuario"
-            class="action-button"
+            class="action-button e-button e-fx e-active"
           >
             <span>Consultar usuários</span>
             <img src="src/assets/users-icon.svg" alt="" />
           </i-button>
           <i-button to="/cadastro-usuario"
-            class="action-button"
+            class="action-button e-button e-fx"
           >
             <span>Cadastros de usuários</span>
           </i-button>
           <i-button to="/altera-usuario"
-            class="action-button"
+            class="action-button e-button e-fx"
           >
             <span>Alterar usuários</span>
           </i-button>
           <i-button to="/excluir-usuario"
-            class="action-button"
+            class="action-button e-button e-fx"
           >
             <span>Excluir usuários</span>
           </i-button>
@@ -48,13 +48,12 @@
 
     <i-layout-footer class="_display:flex _justify-content:start nav-footer">
         <i-button to="/login"
-          color="danger"
-          class="_border-radius _display:flex _justify-content:space-between logout-button"
+          class="_border-radius _display:flex _justify-content:space-between logout-button e-button e-danger"
         >
           <span>Sair</span>
           <img src="src/assets/logout-icon.png" alt="" />
         </i-button>
-      <i-button to="/minha-conta" color="light" class="_border-radius:circle account-config">
+      <i-button to="/minha-conta" class="_border-radius:circle account-config e-button e-neutral">
         <img src="src/assets/account-config-icon.svg" alt="" />
       </i-button>
     </i-layout-footer>
@@ -77,6 +76,7 @@ export default {
   width: 400px;
   height: 100vh;
   font-family: "Noto Sans", sans-serif;
+  background-color: #f9f9f9;
 
   .nav-header {
     .logo {
@@ -110,23 +110,7 @@ export default {
     .action-button {
       display: flex;
       justify-content: space-between;
-      background-color: #6b7aff;
-      font-weight: bold;
-      font-size: 16px;
-      color: #ffffff;
       width: 100%;
-      height: 55px;
-      border-radius: 50px !important;
-      padding-left: 28px;
-      padding-right: 31px;
-      &:hover {
-        background-color: #3d50ff;
-        color: #ffffff;
-      }
-      &:focus {
-        background-color: #3d50ff;
-        color: #ffffff;
-      }
     }
   }
 
@@ -134,7 +118,6 @@ export default {
     gap: 20px;
     .logout-button {
       width: 120px;
-      height: 55px;
       border-radius: 50px !important;
       padding-left: 28px;
       padding-right: 24px;
@@ -142,15 +125,7 @@ export default {
     }
 
     .account-config {
-      width: 55px;
-      height: 55px;
-      background-color: #fff;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15), inset 0px 1px 1px rgba(0, 0, 0, 0.15);
-      border: none;
-      border: 1px 1px 0 0 solid #e5e5e5;
-      &:hover {
-        background-color: #e5e5e5;
-      }
+      width: 50px;
     }
   }
 }

@@ -19,6 +19,7 @@
   "dependencies": {
     "@inkline/inkline": "^3.2.2",
     "axios": "^1.4.0",
+    "dotenv": "^16.0.3",
     "vue": "^3.2.47",
     "vue-router": "^4.1.6"
   },

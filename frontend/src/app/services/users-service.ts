@@ -6,7 +6,7 @@ export const create = (user: UserCreate) => {
 };
 
 export const listUsers = (skip = 0) => {
-  return Http.get<User[]>('/user' + `?skip=${skip}`);
+  return Http.get<User[]>(`/user?skip=${skip}`);
 };
 
 export const getUserByEmail = (email: string) => {

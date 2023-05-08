@@ -1,0 +1,43 @@
+@import "https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap";
+@import 'colours.scss';
+
+.e-input {
+  outline: $purple !important;
+}
+
+.e-button {
+  display: flex;
+  background-color: $purple;
+  font-weight: bold;
+  font-size: 16px;
+  color: #ffffff !important;
+  padding: 0 30px;
+  height: 50px;
+  border-radius: 50px !important;
+  border: none;
+
+  &.e-fx {
+    background-color: $purple-light;
+    &.e-active {
+      background-color: $purple;
+    }
+    &:hover,
+    &:focus {
+      background-color: $purple;
+    }
+  }
+
+  &.e-danger {
+    background-color: $red;
+  }
+
+  &.e-neutral {
+    background-color: $white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15),
+      inset 0px 1px 1px rgba(0, 0, 0, 0.15);
+    border: 1px 1px 0 0 solid $gray-light;
+    &:hover {
+      background-color: $gray-light;
+    }
+  }
+}
