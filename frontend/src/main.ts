@@ -4,6 +4,7 @@ import App from "./app/App.vue";
 import { Inkline, components } from "@inkline/inkline";
 import "@inkline/inkline/inkline.scss";
 
+
 import "./styles/global.scss";
 import "./styles/style.scss";
 import router from './app/router/router';

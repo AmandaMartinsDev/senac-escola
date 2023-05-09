@@ -5,9 +5,20 @@
   --color--primary--h: 195deg;
   --color--primary--s: 77%;
   --color--primary--l: 39%;
+  --border-top-left-radius: 1rem;
+    --border-top-right-radius: 1rem;
+    --border-bottom-right-radius: 1rem;
+    --border-bottom-left-radius: 1rem;
 }
 
 @include i-input() {
   ----border-radius: 50px;
   ----padding: 10px 25px;
+}
+
+.botoes{
+  position:absolute; 
+    top:50%;
+    left:50%;
+    transform: translate(180%, 900%)
 }
