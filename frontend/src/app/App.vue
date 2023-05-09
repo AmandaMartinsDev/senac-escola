@@ -1,6 +1,6 @@
 <template>
   <i-layout vertical class="app">
-    <i-layout-aside :style="{display: currentRouteName == '/login'? 'none': 'flex'}">
+    <i-layout-aside :style="{display: currentRouteName == '/login'? 'none': 'flex', width: 'min-content' }">
       <Navbar></Navbar>
     </i-layout-aside>
     <i-layout-content>

@@ -21,23 +21,23 @@
         </i-layout-header>
 
         <i-layout-content class="nav-content">
-          <i-button to="/consulta-usuario"
+          <i-button to="/consultar-usuarios"
             class="action-button e-button e-fx e-active"
           >
             <span>Consultar usuários</span>
             <img src="src/assets/users-icon.svg" alt="" />
           </i-button>
-          <i-button to="/cadastro-usuario"
+          <i-button to="/cadastro-usuarios"
             class="action-button e-button e-fx"
           >
             <span>Cadastros de usuários</span>
           </i-button>
-          <i-button to="/altera-usuario"
+          <i-button to="/alterar-usuarios"
             class="action-button e-button e-fx"
           >
             <span>Alterar usuários</span>
           </i-button>
-          <i-button to="/excluir-usuario"
+          <i-button to="/excluir-usuarios"
             class="action-button e-button e-fx"
           >
             <span>Excluir usuários</span>
