@@ -6,9 +6,9 @@
   --color--primary--s: 77%;
   --color--primary--l: 39%;
   --border-top-left-radius: 1rem;
-    --border-top-right-radius: 1rem;
-    --border-bottom-right-radius: 1rem;
-    --border-bottom-left-radius: 1rem;
+  --border-top-right-radius: 1rem;
+  --border-bottom-right-radius: 1rem;
+  --border-bottom-left-radius: 1rem;
 }
 
 @include i-input() {

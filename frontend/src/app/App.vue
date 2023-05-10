@@ -1,6 +1,6 @@
 <template>
-  <i-layout vertical class="app">
-    <i-layout-aside :style="{display: currentRouteName == '/login'? 'none': 'flex', width: 'min-content' }">
+  <i-layout vertical class="app _display:flex">
+    <i-layout-aside :style="{display: currentRouteName == '/login'? 'none': 'flex'}">
       <Navbar></Navbar>
     </i-layout-aside>
     <i-layout-content>
@@ -27,5 +27,6 @@ export default {
 <style scoped lang="scss">
 .app {
   height: 100vh !important;
+  justify-content: space-between;
 }
 </style>

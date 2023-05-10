@@ -22,23 +22,23 @@
 
         <i-layout-content class="nav-content">
           <i-button to="/consultar-usuarios"
-            class="action-button e-button e-fx e-active"
+            class="action-button e-button e-fx" :class="{'e-active': $route.path == '/consultar-usuarios'}"
           >
             <span>Consultar usuários</span>
             <img src="src/assets/users-icon.svg" alt="" />
           </i-button>
           <i-button to="/cadastro-usuarios"
-            class="action-button e-button e-fx"
+            class="action-button e-button e-fx" :class="{'e-active': $route.path == '/cadastro-usuarios'}"
           >
             <span>Cadastros de usuários</span>
           </i-button>
           <i-button to="/alterar-usuarios"
-            class="action-button e-button e-fx"
+            class="action-button e-button e-fx" :class="{'e-active': $route.path == '/alterar-usuarios'}"
           >
             <span>Alterar usuários</span>
           </i-button>
           <i-button to="/excluir-usuarios"
-            class="action-button e-button e-fx"
+            class="action-button e-button e-fx" :class="{'e-active': $route.path == '/excluir-usuarios'}"
           >
             <span>Excluir usuários</span>
           </i-button>
@@ -63,8 +63,11 @@
 <script lang="ts">
 
 export default {
-  components: {
-  },
+  computed: {
+    currentRouteName() {
+      return this.$route.path;
+    },
+  }
 };
 </script>
 
