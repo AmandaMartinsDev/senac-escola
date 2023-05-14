@@ -6,6 +6,28 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.select-wrapper .input-wrapper .input-suffix > .select-caret {
+  // Faça um triangulo para baixo
+  width: 0; 
+  height: 0; 
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #333;
+  background-color: transparent;
+  outline: none;
+}
+
+.input-wrapper .input .input-clear {
+  background-image: url(/src/assets/clear-icon.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  &::before {
+    background-color: transparent;
+  }
+}
+
 .e-table {
   &.table-wrapper {
     border-radius: 25px;

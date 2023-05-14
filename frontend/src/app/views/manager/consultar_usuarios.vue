@@ -16,6 +16,7 @@
                 :options="options"
                 autocomplete
                 placeholder="Escolha o tipo do usuário"
+                clearable
               />
             </i-column>
             <i-column sm="5" offset-sm="2" md="6" offset-md="0">
@@ -45,17 +46,17 @@
                 <thead>
                   <tr>
                     <th>Nome</th>
-                    <th>email</th>
+                    <th>Email</th>
                     <th>CPF</th>
                     <th>Tipo</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr v-for="user in filteredUsers">
-                    <td>{{ user.name }}</td>
-                    <td>{{ user.email }}</td>
-                    <td>{{ user.document }}</td>
-                    <td>{{ user.type }}</td>
+                    <td>{{ user.user_name }}</td>
+                    <td>{{ user.user_email }}</td>
+                    <td>{{ user.document_id }}</td>
+                    <td>{{ user.user_type }}</td>
                   </tr>
                 </tbody>
               </i-table>
@@ -72,122 +73,72 @@
 </template>
 
 <script lang="ts">
-export default {
+import { User } from "../../model/user.model";
+import { UserType } from "../../model/user-type.enum";
+import { defineComponent, ref, computed, onMounted } from "vue";
+import { listUsers } from "../../services/users-service";
+import { maskCpf } from '../../util/mask-cpf';
+
+export default defineComponent({
   name: "ConsultarUsuarios",
-  data() {
-    return {
-      selected: "" as any,
-      options: [
-        { id: 1, label: "Aluno" },
-        { id: 2, label: "Professor" },
-        { id: 3, label: "Fornecedor" },
-      ],
-      filter: {
-        name: "",
-        email: "",
-        document: "",
-        type: "",
-      },
-      users: [
-        {
-          name: "Nome",
-          email: "email@email.com",
-          document: "111.111.111-11",
-          type: "Aluno",
-        },
-        {
-          name: "Nome",
-          email: "email@email.com",
-          document: "111.111.111-11",
-          type: "Aluno",
-        },
-        {
-          name: "Nome",
-          email: "email@email.com",
-          document: "111.111.111-11",
-          type: "Aluno",
-        },
-        {
-          name: "Cavalo",
-          email: "email@email.com",
-          document: "111.111.111-11",
-          type: "Aluno",
-        },
-        {
-          name: "Nome",
-          email: "email@email.com",
-          document: "111.111.111-11",
-          type: "Professor",
-        },
-        {
-          name: "Nome",
-          email: "email@email.com",
-          document: "111.111.111-11",
-          type: "Professor",
-        },
-        {
-          name: "Nome",
-          email: "email@email.com",
-          document: "111.111.111-11",
-          type: "Professor",
-        },
-        {
-          name: "Nome",
-          email: "email@email.com",
-          document: "111.111.111-11",
-          type: "Professor",
-        },
-        {
-          name: "Nome",
-          email: "email@email.com",
-          document: "111.111.111-11",
-          type: "Professor",
-        },
-        {
-          name: "Nome",
-          email: "email@email.com",
-          document: "999.999.999-99",
-          type: "Fornecedor",
-        },
-        {
-          name: "Nome",
-          email: "email@email.com",
-          document: "111.111.111-11",
-          type: "Fornecedor",
-        },
-        {
-          name: "Nome",
-          email: "cachorro@email.com",
-          document: "111.111.111-11",
-          type: "Fornecedor",
-        },
-      ],
-    };
-  },
-  computed: {
-    filteredUsers() {
-      // this.filter.type = this.selected.label as string;
-      return this.users.filter((user) => {
+  setup() {
+    const selected = ref();
+    const options = ref([
+      { id: "STUDENT", label: "Aluno" },
+      { id: "TEACHER", label: "Professor" },
+      { id: "FORNECEDOR", label: "Fornecedor" },
+      { id: "MANAGER", label: "Gerente" },
+    ]);
+    const filter = ref({
+      name: "",
+      email: "",
+      document: "",
+      type: "",
+    });
+    const users = ref([] as User[]);
+
+    const filteredUsers = computed(() => {
+      return users.value.filter((user) => {
+        console.log("Filter: ", )
         return (
-          user.name.includes(this.filter.name) &&
-          user.email.includes(this.filter.email) &&
-          user.document.includes(this.filter.document) &&
-          user.type.includes(this.filter.type)
+          user.user_name.includes(filter.value.name) &&
+          user.user_email.includes(filter.value.email) &&
+          user.document_id.toString().includes(filter.value.document) &&
+          (selected.value == undefined || user.user_type == (<any>UserType)[selected.value.id])
         );
       });
-    },
+    });
+
+    const getUsers = () => {
+      listUsers().then((response) => {
+        console.log(response)
+        users.value = response.data.map(user => {
+          return {
+            user_name: user.user_name,
+            user_type: (<any>UserType)[user.user_type.toUpperCase()],
+            document_id: maskCpf(user.document_id.toString()),
+            user_address: user.user_address,
+            user_phone: user.user_phone,
+            user_email: user.user_email,
+          }
+        })
+        console.log(users.value)
+      });
+    };
+
+    onMounted(() => {
+      getUsers();
+    });
+
+    return {
+      selected,
+      options,
+      filter,
+      users,
+      filteredUsers,
+    };
   },
-  watch: {
-    selected: function(val, oldVal) {
-      this.filter.type = val.label;
-    },
-  },
-  methods: {
-    log(value: any) {
-      console.log(value);
-    },
-  },
-};
+});
 </script>
 
 <style lang="scss">

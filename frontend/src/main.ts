@@ -1,7 +1,7 @@
 import { createApp } from "vue";
 import App from "./app/App.vue";
 
-import { Inkline, components } from "@inkline/inkline";
+import { Inkline, components,  } from "@inkline/inkline";
 import "@inkline/inkline/inkline.scss";
 
 
@@ -14,6 +14,7 @@ const app = createApp(App);
 app.use(Inkline, {
   colorMode: "light",
   components,
+  
 });
 
 app.use(router)
