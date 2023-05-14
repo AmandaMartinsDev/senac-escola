@@ -63,17 +63,6 @@ $ docker inspect pgadmin | grep "IPAddress"
 
 - Verificar se as tabelas e dados foram criados no banco de dados.
 
-- Localizar o endereço do banco de dados no terminal com o comando abaixo (irá ser utilizado para configurar o connection string do backend):
-
-<!-- termynal -->
-
-```console
-$ docker inspect postgres | grep "IPAddress"
-                            "SecondaryIPAddresses": null,
-                            "IPAddress": "",
-                                    "IPAddress": "172.18.0.3",
-```
-
 > 💡 Caso queira parar a execução do container, basta rodar o comando: `docker-compose down`.
 
 > ⚠️ Ao parar a execução do container, todos os dados serão perdidos.
@@ -95,7 +84,7 @@ $ cd backend
 - Editar o arquivo `.env` conforme o exemplo abaixo, ajustando o seu endereço local do banco de dados na connection string.
 
 ```env
-DATABASE_URL=postgresql://admin:123@172.19.0.2/escola
+DATABASE_URL=postgresql://admin:123@localhost/escola
 ```
 
 - Instalar as dependências com o comando abaixo:
