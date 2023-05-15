@@ -43,7 +43,7 @@ import router from '../router/router';
 export default defineComponent({
   name: 'Login',
   setup() {
-    const user = 'Adrian'; 
+    const user = 'adrian@hotmail.com'; 
     const userName = ref('');
     const password = ref('');
     
