@@ -81,10 +81,15 @@ $ cd backend
 
 - Criar o arquivo `.env` na raíz do projeto.
 
-- Editar o arquivo `.env` conforme o exemplo abaixo, ajustando o seu endereço local do banco de dados na connection string.
+- Editar o arquivo `.env` conforme o exemplo abaixo:
 
 ```env
 DATABASE_URL=postgresql://admin:123@localhost/escola
+ACCESS_TOKEN_EXPIRE_MINUTES=30
+REFRESH_TOKEN_EXPIRE_MINUTES=10080
+ALGORITHM=HS256
+JWT_SECRET_KEY=JWT_SECRET_KEY
+JWT_REFRESH_SECRET_KEY=JWT_REFRESH_SECRET_KEY
 ```
 
 - Instalar as dependências com o comando abaixo:
