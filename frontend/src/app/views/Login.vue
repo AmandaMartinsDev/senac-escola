@@ -11,7 +11,7 @@
         <i-form><h2>Acesse sua conta</h2></i-form>
         <i-form-group>
           <i-form-label>Email:</i-form-label>
-          <i-input name="email" placeholder="Digite o seu email aqui..." />
+          <i-input name="email" placeholder="Digite o seu email aqui..." v-model="userName" />
         </i-form-group>
         <i-form-group>
           <i-form-label>Senha:</i-form-label>
@@ -19,10 +19,11 @@
             name="password"
             type="password"
             placeholder="Digite a sua senha aqui..."
+            v-model="password"
           />
         </i-form-group>
         <i-form-group style="text-align: center">
-          <i-button color="primary" class="e-button access" type="submit">
+          <i-button color="primary" class="e-button access" type="submit" @click="login">
             Acessar
           </i-button>
         </i-form-group>
@@ -33,6 +34,35 @@
     >
   </i-layout>
 </template>
+
+<script lang="ts">
+import { defineComponent, ref } from 'vue';
+import router from '../router/router';
+
+
+export default defineComponent({
+  name: 'Login',
+  setup() {
+    const user = 'Adrian'; 
+    const userName = ref('');
+    const password = ref('');
+    
+    const login = () => {
+      console.log(userName.value, password.value)
+      if(userName.value.toLowerCase() == user.toLowerCase() && password.value.length > 5) {
+        router.push('/consultar-usuarios')
+      }
+    }
+    
+    return {
+      login,
+      userName,
+      password
+    };
+  },
+});
+
+</script>
 
 <style scoped lang="scss">
 h2 {
