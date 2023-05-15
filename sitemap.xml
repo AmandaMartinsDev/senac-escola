@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://amandamartinsdev.dev/senac-escola/</loc>
+         <lastmod>2023-05-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://amandamartinsdev.dev/senac-escola/configura%C3%A7%C3%B5es/</loc>
+         <lastmod>2023-05-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://amandamartinsdev.dev/senac-escola/pull-request/</loc>
+         <lastmod>2023-05-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://amandamartinsdev.dev/senac-escola/requisitos/</loc>
+         <lastmod>2023-05-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://amandamartinsdev.dev/senac-escola/requisi%C3%A7%C3%B5es/</loc>
+         <lastmod>2023-05-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://amandamartinsdev.dev/senac-escola/testes/</loc>
+         <lastmod>2023-05-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+</urlset>
