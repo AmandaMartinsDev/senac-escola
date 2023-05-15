@@ -1,0 +1,133 @@
+@import "https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap";
+@import "colours.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.select-wrapper .input-wrapper .input-suffix > .select-caret {
+  // Faça um triangulo para baixo
+  width: 0; 
+  height: 0; 
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #333;
+  background-color: transparent;
+  outline: none;
+}
+
+.input-wrapper .input .input-clear {
+  background-image: url(/src/assets/clear-icon.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  &::before {
+    background-color: transparent;
+  }
+}
+
+.e-table {
+  &.table-wrapper {
+    border-radius: 25px;
+    overflow: hidden;
+    .table {
+      margin: 0;
+      display: block;
+      tr {
+        text-align: center;
+        display: flex;
+        width: 100%;
+      }
+      thead {
+        display: block;
+        width: 100%;
+        th {
+          background-color: #dedede;
+          color: #434343;
+          width: 25%;
+        }
+      }
+      tbody {
+        display: block;
+        width: 100%;
+        max-height: 300px;
+        overflow-y: auto;
+        td {
+          background-color: #fbfbfb;
+          color: #434343;
+          width: 25%;
+        }
+      }
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.e-input {
+  outline: $purple !important;
+}
+
+.e-content {
+  background-color: $white;
+  padding: 40px;
+  height: 100vh;
+
+  .e-header {
+    width: 100%;
+    padding-left: 20px;
+  }
+}
+
+.e-button {
+  display: flex;
+  background-color: $purple;
+  font-weight: bold;
+  font-size: 16px;
+  color: #ffffff !important;
+  padding: 0 30px;
+  height: 50px;
+  border-radius: 50px !important;
+  border: none;
+
+  &.e-fx {
+    background-color: $purple-light;
+    &.e-active {
+      background-color: $purple;
+    }
+    &:hover,
+    &:focus {
+      background-color: $purple;
+    }
+  }
+
+  &.e-danger {
+    background-color: $red;
+  }
+
+  &.e-neutral {
+    background-color: $white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15),
+      inset 0px 1px 1px rgba(0, 0, 0, 0.15);
+    border: 1px 1px 0 0 solid $gray-light;
+    &:hover {
+      background-color: $gray-light;
+    }
+  }
+}
