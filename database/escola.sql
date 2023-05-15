@@ -4,7 +4,7 @@ CREATE TABLE users (
   user_password varchar(250) NOT NULL, 
   user_name varchar(250) NOT NULL, 
   user_type varchar(8) NOT NULL, 
-  document_id bigint NOT NULL, 
+  document_id varchar(14) NOT NULL, 
   user_address varchar(250) NOT NULL, 
   user_phone bigint NOT NULL, 
   PRIMARY KEY (user_email)
