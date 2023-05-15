@@ -6,7 +6,7 @@ from pydantic import BaseModel
 class UserBase(BaseModel):
     user_name: str
     user_type: str
-    document_id: int
+    document_id: str
     user_address: str
     user_phone: int
 
@@ -21,7 +21,7 @@ class UserUpdate(UserBase):
     user_password: Optional[str] = None
     user_name: Optional[str] = None
     user_type: Optional[str] = None
-    document_id: Optional[int] = None
+    document_id: Optional[str] = None
     user_address: Optional[str] = None
     user_phone: Optional[int] = None
 
