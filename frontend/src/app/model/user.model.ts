@@ -1,6 +1,6 @@
 import { UserType } from './user-type.enum';
 
-export interface UserCreate {
+export interface UserCreate extends User {
     user_email: string;
     user_password: string;
 }

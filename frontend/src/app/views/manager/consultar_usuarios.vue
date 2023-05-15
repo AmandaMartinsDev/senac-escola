@@ -40,7 +40,7 @@
               offset-sm="2"
               md="12"
               offset-md="0"
-              class="_margin-top:4"
+              class="_margin-top:4 results"
             >
               <i-table v-if="filteredUsers.length > 0" class="e-table">
                 <thead>
@@ -60,6 +60,7 @@
                   </tr>
                 </tbody>
               </i-table>
+              <div class="loading" v-if="filteredUsers.length == 0"></div>
             </i-column>
           </i-row>
         </i-container>
@@ -101,8 +102,8 @@ export default defineComponent({
       return users.value.filter((user) => {
         console.log("Filter: ", )
         return (
-          user.user_name.includes(filter.value.name) &&
-          user.user_email.includes(filter.value.email) &&
+          user.user_name.toLowerCase().includes(filter.value.name.toLowerCase()) &&
+          user.user_email.toLowerCase().includes(filter.value.email.toLowerCase()) &&
           user.document_id.toString().includes(filter.value.document) &&
           (selected.value == undefined || user.user_type == (<any>UserType)[selected.value.id])
         );
@@ -149,5 +150,27 @@ export default defineComponent({
 }
 .content {
   padding: 40px;
+}
+
+.results {
+  position: relative;
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 10px solid #ccc;
+  border-top-color: transparent;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 </style>
