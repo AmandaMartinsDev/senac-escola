@@ -1,7 +1,7 @@
 import { User, UserCreate } from '../model/user.model';
 import Http from './http'
 
-export const create = (user: UserCreate) => {
+export const createUser = (user: UserCreate) => {
     return Http.post<User>('/users', user);
 };
 

@@ -30,3 +30,21 @@ def create_user(db: Session, user: schemas.UserCreate):
     db.commit()
     db.refresh(db_user)
     return db_user
+
+
+def update_user(
+    db: Session, db_user: schemas.UserBase, user: schemas.UserUpdate
+):
+    user_data = user.dict(exclude_unset=True)
+    for key, value in user_data.items():
+        setattr(db_user, key, value)
+    db.add(db_user)
+    db.commit()
+    db.refresh(db_user)
+    return db_user
+
+
+def delete_user(db: Session, db_user: schemas.UserBase):
+    db.delete(db_user)
+    db.commit()
+    return {'ok': True}

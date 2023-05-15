@@ -14,7 +14,6 @@ const app = createApp(App);
 app.use(Inkline, {
   colorMode: "light",
   components,
-  
 });
 
 app.use(router)
