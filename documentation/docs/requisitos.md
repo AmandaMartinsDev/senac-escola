@@ -36,10 +36,14 @@
 - [Python (^3.11)](https://www.python.org/)
 - [FastAPI (^0.95.1)](https://fastapi.tiangolo.com/)
 - [uvicorn (^0.21.1)](https://www.uvicorn.org/)
-- [SQLAlchemy (^2.0.9)](https://www.sqlalchemy.org/)
+- [SQLAlchemy (^2.0.13)](https://www.sqlalchemy.org/)
 - [pydantic (^1.10.7)](https://pydantic-docs.helpmanual.io/)
 - [psycopg2-binary (^2.9.6)](https://www.psycopg.org/)
 - [python-dotenv (^1.0.0)](https://pypi.org/project/python-dotenv/)
+- [python-jose[cryptography] (^3.3.0)](https://python-jose.readthedocs.io/en/latest/)
+- [passlib[bcrypt] (^1.7.4)](https://passlib.readthedocs.io/en/stable/)
+- [python-multipart (^0.0.6)](https://pypi.org/project/python-multipart/)
+
 
 ### 🧰 Desenvolvimento
 
