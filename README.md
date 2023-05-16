@@ -12,23 +12,17 @@
 
 Para utilizar o projeto, é necessário ter instalado inicialmente em sua máquina:
 
-- [Git](https://git-scm.com/)
-- [Docker](https://www.docker.com/)
 - [Node.js](https://nodejs.org/)
-- [Python](https://www.python.org/)
-- [Poetry](https://python-poetry.org/)
-
-Para verificar todos os requisitos do projeto, acesse a página de [requisitos](https://amandamartinsdev.github.io/senac-escola/requisitos).
 
 ---
 
 ## 🔎 Como utilizar
 
-Para utilizar o projeto, é necessário seguir os passos descritos na página de [configurações](https://amandamartinsdev.github.io/senac-escola/configurações).
+Para rodar a aplicação basta clonar ou baixar a aplicação, pelo terminal entrar na pasta frontend rodar os seguintes comandos:
+- `npm install`
+- `npm run dev`
 
-Com relação aos testes, é necessário seguir os passos descritos na página de [testes](https://amandamartinsdev.github.io/senac-escola/testes), e para requisições no backend, a página de [requisições](https://amandamartinsdev.github.io/senac-escola/requisições).
-
-E ao finalizar os trabalhos, é necessário seguir os passos descritos na página de [encerramento](https://amandamartinsdev.github.io/senac-escola/pull-request).
+Após isso, pelo navegador, basta acessar `http://localhost:5173`
 
 ---
 
